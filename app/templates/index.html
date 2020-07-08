@@ -1,0 +1,48 @@
+{% extends 'base.html'%} {% import 'macros.html' as macro%}
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8"> {% if title %}
+    <title> {{ title }}</title>
+    {% else %}
+    <title> Welcome to LateLateMorningNews </title>
+    {% endif %}
+</head>
+
+{% block content %}
+
+<!--sources section-->
+<!-- general news -->
+<h3>
+    <hr>General News
+    <hr>
+</h3>
+<ul>
+    {{ macro.displayNewsList(general_news)}}
+</ul>
+<!-- business  -->
+<h3> Sources
+    <hr>
+</h3>
+<ul>
+    {{ macro.displayNewsList(news_List)}}
+</ul>
+<!-- Entertainment -->
+<h3> Entertainment
+    <hr>
+</h3>
+<ul>
+    {{ macro.displayNewsList(entertainment)}}
+</ul>
+<!-- Technology -->
+<h3> Technology </h3>
+<ul>
+    {{ macro.displayNewsList(technology)}}
+</ul>
+
+
+{% endblock %}
+
+</html>
