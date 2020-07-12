@@ -26,8 +26,7 @@ def get_news():
         if get_news_response['sources']:
             news_sources_list = get_news_response['sources']
             news_sources = process_sources(news_sources_list)
-            print(get_news_url)
-            print(news_sources)
+           
            
 
     return news_sources
@@ -54,21 +53,7 @@ def process_sources(news_list):
     
     return news_sources
 
-def headline_source(id):
-    headline_source_url = 'https://newsapi.org/v2/top-headlines?sources={}&apiKey={}'.format(id,api_key)
-    print(headline_source_url)
-    with urllib.request.urlopen(headline_source_url) as url:
-        headline_source_data = url.read()
-        headline_source_response = json.loads(headline_source_data)
 
-        headline_source_results = None
-
-        if headline_source_response['headline']:
-            headline_source_list = headline_source_response['headline']
-            headline_source_results = process_headline_results(headline_source_list)
-
-
-    return headline_source_results
 
 
         
