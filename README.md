@@ -24,3 +24,9 @@ v1.0
 * Place them at start.sh
 * Run the application ./start.sh
 * Deploy at Heroku
+
+## Known Bugs
+No Bugs Know at the moment contact if you find any @akmunywoki@gmail.com
+
+#### MIT License
+
