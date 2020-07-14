@@ -1,5 +1,10 @@
 {% extends 'base.html'%} {% import 'macros.html' as macro%}
 
+<!-- Styles block -->
+
+{% block styles%} {{ super() }}
+<link rel="stylesheet" href="{{url_for('static',filename='css/index.css')}}"> {% endblock %}
+<!-- Content block -->
 <!DOCTYPE html>
 <html>
 
@@ -14,33 +19,15 @@
 {% block content %}
 
 <!--sources section-->
-<!-- general news -->
-<h3>
-    <hr>General News
-    <hr>
-</h3>
-<ul>
-    {{ macro.displayNewsList(general_news)}}
-</ul>
+
 <!-- business  -->
-<h3> Sources
+<h3> Headlines
     <hr>
 </h3>
 <ul>
     {{ macro.displayNewsList(news_List)}}
 </ul>
-<!-- Entertainment -->
-<h3> Entertainment
-    <hr>
-</h3>
-<ul>
-    {{ macro.displayNewsList(entertainment)}}
-</ul>
-<!-- Technology -->
-<h3> Technology </h3>
-<ul>
-    {{ macro.displayNewsList(technology)}}
-</ul>
+
 
 
 {% endblock %}
